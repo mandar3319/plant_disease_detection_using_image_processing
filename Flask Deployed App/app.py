@@ -56,7 +56,7 @@ def submit():
     if request.method == 'POST':
         image = request.files['image']
         filename = image.filename
-        file_path = os.path.join('E:/archive/test/test', filename)
+        file_path = os.path.join(r'E:/archive/test/test', filename)
         image.save(file_path)
         pred = prediction(file_path)
         title = disease_info['disease_name'][pred]
