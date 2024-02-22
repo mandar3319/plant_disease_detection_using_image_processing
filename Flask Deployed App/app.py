@@ -26,8 +26,8 @@ model.load_state_dict(torch.load(model_output_path))
 model.eval()
 
 # Load disease information
-disease_info = pd.read_csv('D:\Plant-Disease-Using-Image_processing\Flask Deployed App\disease_info.csv', encoding='cp1252')
-supplement_info = pd.read_csv('D:\Plant-Disease-Using-Image_processing\Flask Deployed App\supplement_info.csv', encoding='cp1252')
+disease_info = pd.read_csv(r'D:\Plant-Disease-Using-Image_processing\Flask Deployed App\disease_info.csv', encoding='cp1252')
+supplement_info = pd.read_csv(r'D:\Plant-Disease-Using-Image_processing\Flask Deployed App\supplement_info.csv', encoding='cp1252')
 
 def prediction(image_path):
     image = Image.open(image_path)
